@@ -1,0 +1,25 @@
+name: BirdAC
+version: '${project.version}'
+main: me.eclipsemaster.BirdAC
+api-version: '1.13'
+authors: [eclipsemaster]
+description: A high-performance anticheat for Minecraft.
+depend: [packetevents]
+softdepend: [ViaVersion, PlaceholderAPI]
+
+commands:
+  alert:
+    description: Toggle alert messages.
+    usage: /<command>
+  bird:
+    description: bird's main command.
+    usage: /<command>
+  banwave:
+    description: Manage bird's banwaves
+    usage: /<command>
+  log:
+    description: In-game view of logs.
+    usage: /<command>
+  punishments:
+    description: In-game punishments
+    usage: /<command>
