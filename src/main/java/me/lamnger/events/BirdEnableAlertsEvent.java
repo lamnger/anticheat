@@ -1,19 +1,21 @@
-package me.eclipsemaster.events;
+package me.lamnger.events;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
-public class BirdPunishmentLogCreationEvent extends Event implements Cancellable {
+public class BirdEnableAlertsEvent extends Event implements Cancellable {
    private boolean cancelled;
    private final Player player;
+   private final long timestamp = System.currentTimeMillis();
    private static final HandlerList handlers = new HandlerList();
 
-   public BirdPunishmentLogCreationEvent(Player var1) {
-      super(true);
+   public BirdEnableAlertsEvent(Player var1) {
       this.player = var1;
    }
+
+
 
    public HandlerList getHandlers() {
       return handlers;
@@ -35,6 +37,12 @@ public class BirdPunishmentLogCreationEvent extends Event implements Cancellable
 
    public Player getPlayer() {
       return this.player;
+   }
+
+
+
+   public long getTimestamp() {
+      return this.timestamp;
    }
 
 

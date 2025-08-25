@@ -1,6 +1,6 @@
-package me.eclipsemaster.Listener;
+package me.lamnger.Listener;
 
-import me.eclipsemaster.data.UserData;
+import me.lamnger.data.UserData;
 import com.github.retrooper.packetevents.event.PacketListenerAbstract;
 import com.github.retrooper.packetevents.event.PacketReceiveEvent;
 import com.github.retrooper.packetevents.event.PacketSendEvent;

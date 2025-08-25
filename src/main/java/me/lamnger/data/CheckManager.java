@@ -1,6 +1,6 @@
-package me.eclipsemaster.data;
+package me.lamnger.data;
 
-import me.eclipsemaster.check.Check;
+import me.lamnger.check.Check;
 import com.github.retrooper.packetevents.event.PacketReceiveEvent;
 import com.github.retrooper.packetevents.event.PacketSendEvent;
 
@@ -20,7 +20,8 @@ public class CheckManager {
             try {
                 check.receive(event);
             } catch (Exception e) {
-                // Handle exception to prevent one check from breaking others
+                // Log exception but continue processing other checks
+                System.err.println("Error in check " + check.getName() + ": " + e.getMessage());
                 e.printStackTrace();
             }
         }
@@ -31,15 +32,17 @@ public class CheckManager {
             try {
                 check.send(event);
             } catch (Exception e) {
-                // Handle exception to prevent one check from breaking others
+                // Log exception but continue processing other checks
+                System.err.println("Error in check " + check.getName() + ": " + e.getMessage());
                 e.printStackTrace();
             }
         }
     }
 
     public void initializeChecks() {
+        // Initialize all checks here
         // Example: initCheck(new SpeedCheck(data));
-        // TODO: Add actual checks here
+        // TODO: Add actual checks implementation
     }
 
     protected void initCheck(Check check) {

@@ -1,4 +1,4 @@
-package me.eclipsemaster.data;
+package me.lamnger.data;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;

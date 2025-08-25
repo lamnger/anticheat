@@ -1,6 +1,6 @@
 name: BirdAC
 version: '${project.version}'
-main: me.eclipsemaster.BirdAC
+main: me.lamnger.BirdAC
 api-version: '1.13'
 authors: [eclipsemaster]
 description: A high-performance anticheat for Minecraft.

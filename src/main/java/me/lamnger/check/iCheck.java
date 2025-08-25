@@ -1,4 +1,4 @@
-package me.eclipsemaster.check;
+package me.lamnger.check;
 
 public interface iCheck {
     String getCategory();
@@ -14,11 +14,10 @@ public interface iCheck {
     int getMinimumVlToNotify();
     int getAlertInterval();
     double getBuffer();
-    void setVl(int var1);
+    void setVl(int vl);
     boolean isPunishable();
-    void setBuffer(double var1);
+    void setBuffer(double buffer);
     String getDescription();
     String getComplexType();
     String getDisplayName();
 }
-

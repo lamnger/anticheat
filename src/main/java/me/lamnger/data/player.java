@@ -1,4 +1,4 @@
-package me.eclipsemaster.data;
+package me.lamnger.data;
 
 public interface player {
     int getTotalViolations();

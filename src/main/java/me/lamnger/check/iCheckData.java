@@ -1,4 +1,4 @@
-package me.eclipsemaster.check;
+package me.lamnger.check;
 
 import java.util.List;
 

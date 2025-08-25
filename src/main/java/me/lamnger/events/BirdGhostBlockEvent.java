@@ -1,19 +1,22 @@
-package me.eclipsemaster.events;
+package me.lamnger.events;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
-public class BirdRegisterPlayerEvent extends Event implements Cancellable {
-   private boolean cancelled;
+public class BirdGhostBlockEvent extends Event implements Cancellable {
    private final Player player;
+   private boolean cancelled;
+   private final long timestamp = System.currentTimeMillis();
    private static final HandlerList handlers = new HandlerList();
 
-   public BirdRegisterPlayerEvent(Player var1) {
+   public BirdGhostBlockEvent(Player var1) {
       super(true);
       this.player = var1;
    }
+
+
 
    public HandlerList getHandlers() {
       return handlers;
@@ -25,8 +28,16 @@ public class BirdRegisterPlayerEvent extends Event implements Cancellable {
       return handlers;
    }
 
+
+
    public boolean isCancelled() {
       return this.cancelled;
+   }
+
+
+
+   public void setCancelled(boolean var1) {
+      this.cancelled = var1;
    }
 
 
@@ -37,7 +48,7 @@ public class BirdRegisterPlayerEvent extends Event implements Cancellable {
 
 
 
-   public void setCancelled(boolean var1) {
-      this.cancelled = var1;
+   public long getTimestamp() {
+      return this.timestamp;
    }
 }

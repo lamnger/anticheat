@@ -46,7 +46,7 @@
                                 <!-- Relocate PacketEvents to avoid conflicts -->
                                 <relocation>
                                     <pattern>com.github.retrooper.packetevents</pattern>
-                                    <shadedPattern>me.eclipsemaster.birdac.libs.packetevents</shadedPattern>
+                                    <shadedPattern>me.lamnger.birdac.libs.packetevents</shadedPattern>
                                 </relocation>
                             </relocations>
                         </configuration>

@@ -1,6 +1,6 @@
-package me.eclipsemaster.Listener;
+package me.lamnger.Listener;
 
-import me.eclipsemaster.data.UserData;
+import me.lamnger.data.UserData;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;

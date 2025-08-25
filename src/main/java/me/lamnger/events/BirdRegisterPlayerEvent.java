@@ -1,18 +1,19 @@
-package me.eclipsemaster.events;
+package me.lamnger.events;
 
+import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
-public class BirdBanWaveEndEvent extends Event implements Cancellable {
+public class BirdRegisterPlayerEvent extends Event implements Cancellable {
    private boolean cancelled;
+   private final Player player;
    private static final HandlerList handlers = new HandlerList();
 
-   public BirdBanWaveEndEvent() {
+   public BirdRegisterPlayerEvent(Player var1) {
       super(true);
+      this.player = var1;
    }
-
-
 
    public HandlerList getHandlers() {
       return handlers;
@@ -24,10 +25,14 @@ public class BirdBanWaveEndEvent extends Event implements Cancellable {
       return handlers;
    }
 
-
-
    public boolean isCancelled() {
       return this.cancelled;
+   }
+
+
+
+   public Player getPlayer() {
+      return this.player;
    }
 
 

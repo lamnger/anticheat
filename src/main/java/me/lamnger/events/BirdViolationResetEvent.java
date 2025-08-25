@@ -1,4 +1,4 @@
-package me.eclipsemaster.events;
+package me.lamnger.events;
 
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
